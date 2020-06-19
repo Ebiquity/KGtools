@@ -1,0 +1,7 @@
+# find missing inverse relations
+construct {?o ?p2 ?s .}
+where {
+    ?p1 owl:inverseOf ?p2 .
+    ?s ?p1 ?o .
+    filter not exists {?o ?p2 ?s}
+} 
