@@ -1,0 +1,8 @@
+# add missing relations of a transitive relation (e.g., biggerThan)
+insert  {?e1 ?p ?e3 .}
+where {
+    ?p a  owl:TransitiveProperty .
+    ?e1 ?p ?e2 .
+    ?e2 ?p ?e3.
+    filter not exists {?e1 ?p ?e3 .}
+}

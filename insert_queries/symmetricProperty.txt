@@ -1,5 +1,5 @@
 # add missing relations of a symmetric relation
-construct {?o ?p ?s .}
+insert {?o ?p ?s .}
 where {
     ?p a  owl:SymmetricProperty .
     ?s ?p ?o .
